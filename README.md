@@ -16,25 +16,58 @@ The jupyter notebook contains:
 The model recognises the missing step and saves these 3 information in the text file:
     
     • a model trained on YOLOv5 algorithm to detect 7 different hand wash steps.
-    • For testing the model performance, a new video with only 6 steps (intentionally) is used
+    • For testing the model performance, a new video with only 6 steps (intentionally) is used.
     • The model recognises the missing step and outputs these 3 information:
       • The video duration.
       • Which step is missing.
       • Whether it is non-compliance or compliance with the hand wash norms.
   
-Dataset Format - 
------------------------
-Here is the Kaggle dataset which contains hand wash videos:
+Dataset Information - 
+---------------------
+
+Here is the Kaggle dataset which contains hand wash videos for 7 hand wash steps:
 https://www.kaggle.com/realtimear/hand-wash-dataset 
 
-    • To train the model, the dataset is annotated in YOLO format. 
-    • Have a look at the dataset directory structure in HandWashDataset_yoloFormat.
+• To train the model, the dataset is annotated in YOLO format. <br/>
+• Have a look at the dataset directory structure in HandWashDataset_yoloFormat.
     
-    • For each step the video is first converted into frames
-    • 101 frames of 7 classes are annotated
-    • 81 X 7 frames are used in training set (HandWashDataset_yoloFormat/TrainingData/images/train)
-    • 20 X 7 frames are used in validation set (HandWashDataset_yoloFormat/TrainingData/images/val)
-    • Test videos are stored in HandWashDataset_yoloFormat/TestingData
+    • For each step, the video is first converted into frames.
+    • 101 frames of 7 classes are annotated.
+    • 81 X 7 frames are used in training set (HandWashDataset_yoloFormat/TrainingData/images/train).
+    • 20 X 7 frames are used in validation set (HandWashDataset_yoloFormat/TrainingData/images/val).
+    • Test videos are stored in HandWashDataset_yoloFormat/TestingData.
+    
+Setting up YOLOv5 - 
+-------------------
+
+    • The model has been trained using YOLOv5. The dependencies to install YOLOv5 can be found in https://github.com/ultralytics/yolov5.
+    • Our model has been trained on PyTorch framework.
+    
+
+Training - 
+----------
+
+    • The image input size is (640,640,3).
+    • The model is trained for 100 epoch with a batch size of 16.
+    • The trained model gives validation mAP (mean Average Precision), precision and recall of 0.996, 0.993, 1, respectively.
+    
+    | Steps  | Images | Labels | P     | R | mAP    |
+    | --------------- | ------ | ----- | -- | ----- |
+    | All    | 140    | 140    | 0.993 | 1  | 0.996 |
+    | Step1  | 140    | 20     | 0.99  | 1  | 0.995 |
+    | Step2  | 140    | 20     | 0.99  | 1  | 0.996 |
+    | Step3  | 140    | 20     | 1     | 1  | 0.996 |
+    | Step4  | 140    | 20     | 0.997 | 1  | 0.995 |
+    | Step5  | 140    | 20     | 0.991 | 1  | 0.996 |
+    | Step6  | 140    | 20     | 0.99  | 1  | 0.996 |    
+    | Step7  | 140    | 20     | 0.994 | 1  | 0.996 |
+    
+
+About Model: A Simple 2D CNN model is used to classify among the different classes to detect traffic sign boards. The model consist of 5 conv layer with maxpooling layer and 2 fully connected layer and a softmax layer. we have used ReLU as activation function and Dropout layer is used for regularization.
+
+
+    
+
     
 
 
