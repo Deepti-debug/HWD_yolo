@@ -1,9 +1,8 @@
 # handwash_detection
-Given a video of handwash, this model detects the 7 different hand wash steps involved in the video and output the following:
+Given a video of handwash, this model detects 7 different hand wash steps involved in the video and output the following:
 
     • Display time spent on each activity (hand wash step), and overall time spent in washing hands. 
-    • If overall time spent less than 20 sec, it is non-compliance.
-    • If some steps skipped or some steps not done, it is non-compliance.
+    • Displays if any step is missing
     • Display the final compliance or non compliance.
     
 
