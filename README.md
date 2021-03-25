@@ -43,8 +43,8 @@ Training -
     • The trained model gives validation mAP (mean Average Precision), precision
       and recall of 0.996, 0.993, 1, respectively.
     
-    | Steps  | Images | Labels | P     | R | mAP    |
-    |--------|--------|--------|-------|---|--------|
+    | Steps  | Images | Labels | P     | R  | mAP   |
+    |--------|--------|--------|-------|----|-------|
     | All    | 140    | 140    | 0.993 | 1  | 0.996 |
     | Step1  | 140    | 20     | 0.99  | 1  | 0.995 |
     | Step2  | 140    | 20     | 0.99  | 1  | 0.996 |
