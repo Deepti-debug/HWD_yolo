@@ -39,7 +39,8 @@ https://www.kaggle.com/realtimear/hand-wash-dataset
 Setting up YOLOv5 - 
 -------------------
 
-    • The model has been trained using YOLOv5. The dependencies to install YOLOv5 can be found in https://github.com/ultralytics/yolov5.
+    • The model has been trained using YOLOv5. <br/> 
+      The dependencies to install YOLOv5 can be found in https://github.com/ultralytics/yolov5.
     • Our model has been trained on PyTorch framework.
     
 
@@ -48,7 +49,8 @@ Training -
 
     • The image input size is (640,640,3).
     • The model is trained for 100 epoch with a batch size of 16.
-    • The trained model gives validation mAP (mean Average Precision), precision and recall of 0.996, 0.993, 1, respectively.
+    • The trained model gives validation mAP (mean Average Precision), precision <br/>
+      and recall of 0.996, 0.993, 1, respectively.
     
     | Steps  | Images | Labels | P     | R | mAP    |
     |--------|--------|--------|-------|----|-------|
