@@ -17,9 +17,8 @@ Please take a look at the colab notebook in the attachment at the end of this re
 The jupyter notebook contains:
 
 The model recognises the missing step and saves these 3 information in the text file:
-
+    
     • a model trained on YOLOv5 algorithm to detect 7 different hand wash steps.
-  
     • For testing the model performance, a new video with only 6 steps (intentionally) is used
     • The model recognises the missing step and outputs these 3 information:
       • The video duration.
@@ -28,11 +27,12 @@ The model recognises the missing step and saves these 3 information in the text 
   
 Dataset Format - 
 -----------------------
-• To train the model, the dataset is annotated in YOLO format. Have a look at the dataset directory structure in HandWashDataset_yoloFormat.
-• 101 frames of 7 classes are annotated
-• 81 X 7 frames are used in training set (HandWashDataset_yoloFormat/TrainingData/images/train)
-• 20 X 7 frames are used in validation set (HandWashDataset_yoloFormat/TrainingData/images/val)
-• Test videos are stored in HandWashDataset_yoloFormat/TestingData
+To train the model, the dataset is annotated in YOLO format. Have a look at the dataset directory structure in HandWashDataset_yoloFormat.
+
+    • 101 frames of 7 classes are annotated
+    • 81 X 7 frames are used in training set (HandWashDataset_yoloFormat/TrainingData/images/train)
+    • 20 X 7 frames are used in validation set (HandWashDataset_yoloFormat/TrainingData/images/val)
+    • Test videos are stored in HandWashDataset_yoloFormat/TestingData
 
 
 Colab Notebook:
