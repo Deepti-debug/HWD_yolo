@@ -5,13 +5,10 @@ Given a video of handwash, this model detects the 7 different hand wash steps in
     • If overall time spent less than 20 sec, it is non-compliance.
     • If some steps skipped or some steps not done, it is non-compliance.
     • Display the final compliance or non compliance.
+    
 
 Project Aim - To ensure that hand wash is performed in hospitals, homes and in office premises according to WHO norms.
 -------------------------------------------------------------------------------------------------------------
-
-Please take a look at the colab notebook in the attachment at the end of this readme file.
-
-The jupyter notebook contains:
 
 The model recognises the missing step and saves these 3 information in the text file:
     
@@ -21,6 +18,7 @@ The model recognises the missing step and saves these 3 information in the text 
       • The video duration.
       • Which step is missing.
       • Whether it is non-compliance or compliance with the hand wash norms.
+  
   
 Dataset Information - 
 ---------------------
@@ -37,6 +35,7 @@ https://www.kaggle.com/realtimear/hand-wash-dataset
     • 20 X 7 frames are used in validation set (HandWashDataset_yoloFormat/TrainingData/images/val).
     • Test videos are stored in HandWashDataset_yoloFormat/TestingData.
     
+
 Setting up YOLOv5 - 
 -------------------
 
@@ -52,7 +51,7 @@ Training -
     • The trained model gives validation mAP (mean Average Precision), precision and recall of 0.996, 0.993, 1, respectively.
     
     | Steps  | Images | Labels | P     | R | mAP    |
-    | --------------- | ------ | ----- | -- | ----- |
+    |--------|--------|--------|-------|----|-------|
     | All    | 140    | 140    | 0.993 | 1  | 0.996 |
     | Step1  | 140    | 20     | 0.99  | 1  | 0.995 |
     | Step2  | 140    | 20     | 0.99  | 1  | 0.996 |
@@ -62,14 +61,12 @@ Training -
     | Step6  | 140    | 20     | 0.99  | 1  | 0.996 |    
     | Step7  | 140    | 20     | 0.994 | 1  | 0.996 |
     
-
-About Model: A Simple 2D CNN model is used to classify among the different classes to detect traffic sign boards. The model consist of 5 conv layer with maxpooling layer and 2 fully connected layer and a softmax layer. we have used ReLU as activation function and Dropout layer is used for regularization.
-
-
+    • Results are plotted as follows:
+    ![alt text](http://url/to/results.png)
     
-
     
-
+Please take a look at the following colab notebook.
+It consists of preprocessing of images, model training and model prediction output.
 
 Colab Notebook:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-LVe0ewmRyOwZN8Kr20DDEjDhK73gpLp?authuser=1)
