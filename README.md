@@ -40,7 +40,7 @@ Setting up YOLOv5 -
 -------------------
 
     • The model has been trained using YOLOv5.
-      The dependencies to install YOLOv5 can be found in https://github.com/ultralytics/yolov5.
+      The dependencies to install YOLOv5 can be found in (https://github.com/ultralytics/yolov5)
     • Our model has been trained on PyTorch framework.
     
 
@@ -63,14 +63,17 @@ Training -
     | Step6  | 140    | 20     | 0.99  | 1  | 0.996 |    
     | Step7  | 140    | 20     | 0.994 | 1  | 0.996 |
     
-    • Results are plotted as follows:
-   <p align="center">
-    <img src="results.png" width="350" title="results">
-   </p>
+   
+Results are plotted as follows:
+-------------------------------
+   
+<p align="center">
+    <img src="results.png" width="400" title="results">
+</p>
     
     
 Please take a look at the following colab notebook.
-It consists of preprocessing of images, model training and model prediction output.
+It consists of model training and model prediction output.
 
 Colab Notebook:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-LVe0ewmRyOwZN8Kr20DDEjDhK73gpLp?authuser=1)
