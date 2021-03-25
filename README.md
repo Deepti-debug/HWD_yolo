@@ -1,7 +1,7 @@
 # handwash_detection
 Given a video of handwash, train a model to detect the different hand wash steps involved and output the following:
 
-    • display time spent on each activity (hand wash step), and overall time spent in washing hands. 
+    • Display time spent on each activity (hand wash step), and overall time spent in washing hands. 
     • If overall time spent less than 20 sec, it is non-compliance.
     • If some steps skipped or some steps not done, it is non-compliance.
     • Display the final compliance or non compliance.
@@ -29,11 +29,13 @@ The model recognises the missing step and saves these 3 information in the text 
 Dataset Format - 
 -----------------------
 To train the model, the dataset is annotated in YOLO format. Have a look at the dataset directory structure in HandWashDataset_yoloFormat.
-
+    
+    • For each step the video is first converted into frames
     • 101 frames of 7 classes are annotated
     • 81 X 7 frames are used in training set (HandWashDataset_yoloFormat/TrainingData/images/train)
     • 20 X 7 frames are used in validation set (HandWashDataset_yoloFormat/TrainingData/images/val)
     • Test videos are stored in HandWashDataset_yoloFormat/TestingData
+    
 
 
 Colab Notebook:
