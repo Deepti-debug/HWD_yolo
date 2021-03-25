@@ -1,5 +1,5 @@
 # handwash_detection
-Given a video of handwash, train a model to detect the different hand wash steps involved and output the following:
+Given a video of handwash, this model detects the 7 different hand wash steps involved in the video and output the following:
 
     • Display time spent on each activity (hand wash step), and overall time spent in washing hands. 
     • If overall time spent less than 20 sec, it is non-compliance.
@@ -8,10 +8,6 @@ Given a video of handwash, train a model to detect the different hand wash steps
 
 Project Aim - To ensure that hand wash is performed in hospitals, homes and in office premises according to WHO norms.
 -------------------------------------------------------------------------------------------------------------
-
-Here is the Kaggle dataset which contains many such hand wash videos:
-https://www.kaggle.com/realtimear/hand-wash-dataset
-
 
 Please take a look at the colab notebook in the attachment at the end of this readme file.
 
@@ -28,7 +24,11 @@ The model recognises the missing step and saves these 3 information in the text 
   
 Dataset Format - 
 -----------------------
-To train the model, the dataset is annotated in YOLO format. Have a look at the dataset directory structure in HandWashDataset_yoloFormat.
+Here is the Kaggle dataset which contains hand wash videos:
+https://www.kaggle.com/realtimear/hand-wash-dataset 
+
+• To train the model, the dataset is annotated in YOLO format. 
+• Have a look at the dataset directory structure in HandWashDataset_yoloFormat.
     
     • For each step the video is first converted into frames
     • 101 frames of 7 classes are annotated
