@@ -8,16 +8,7 @@ Given a video of handwash, this model detects the 7 different hand wash steps in
     
 
 Project Aim - To ensure that hand wash is performed in hospitals, homes and in office premises according to WHO norms.
--------------------------------------------------------------------------------------------------------------
-
-The model recognises the missing step and saves these 3 information in the text file:
-    
-    • a model trained on YOLOv5 algorithm to detect 7 different hand wash steps.
-    • For testing the model performance, a new video with only 6 steps (intentionally) is used.
-    • The model recognises the missing step and outputs these 3 information:
-      • The video duration.
-      • Which step is missing.
-      • Whether it is non-compliance or compliance with the hand wash norms.
+-------------------------------------------------------------------------------------------------------------  
   
   
 Dataset Information - 
@@ -30,9 +21,9 @@ https://www.kaggle.com/realtimear/hand-wash-dataset
 • Have a look at the dataset directory structure in HandWashDataset_yoloFormat.
     
     • For each step, the video is first converted into frames.
-    • 101 frames of 7 classes are annotated.
-    • 81 X 7 frames are used in training set (HandWashDataset_yoloFormat/TrainingData/images/train).
-    • 20 X 7 frames are used in validation set (HandWashDataset_yoloFormat/TrainingData/images/val).
+    • 101 frames of 7 classes are annotated (Total Images = 707).
+    • 81 X 7 (567) frames are used in training set (HandWashDataset_yoloFormat/TrainingData/images/train).
+    • 20 X 7 (140) frames are used in validation set (HandWashDataset_yoloFormat/TrainingData/images/val).
     • Test videos are stored in HandWashDataset_yoloFormat/TestingData.
     
 
@@ -68,7 +59,7 @@ Results are plotted as follows:
 -------------------------------
    
 <p align="center">
-    <img src="results.png" width="400" title="results">
+    <img src="results.png" width="450" title="results">
 </p>
     
     
