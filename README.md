@@ -27,8 +27,8 @@ Dataset Format -
 Here is the Kaggle dataset which contains hand wash videos:
 https://www.kaggle.com/realtimear/hand-wash-dataset 
 
-• To train the model, the dataset is annotated in YOLO format. 
-• Have a look at the dataset directory structure in HandWashDataset_yoloFormat.
+    • To train the model, the dataset is annotated in YOLO format. 
+    • Have a look at the dataset directory structure in HandWashDataset_yoloFormat.
     
     • For each step the video is first converted into frames
     • 101 frames of 7 classes are annotated
